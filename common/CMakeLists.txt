@@ -61,6 +61,14 @@ if(build)
         include/pcl/cloud_iterator.h
         )
 
+    set(incs ${incs}
+        include/pcl/ModelCoefficients.h
+        include/pcl/PolygonMesh.h
+        include/pcl/Vertices.h
+        include/pcl/PointIndices.h
+        include/pcl/TextureMesh.h
+        )
+
     if(NOT USE_ROS)
         set(incs ${incs}
           include/pcl/ModelCoefficients.h
