@@ -69,24 +69,6 @@ if(build)
         include/pcl/TextureMesh.h
         )
 
-    if(NOT USE_ROS)
-        set(incs ${incs}
-          include/pcl/ModelCoefficients.h
-          include/pcl/PolygonMesh.h
-          include/pcl/Vertices.h
-          include/pcl/PointIndices.h
-          include/pcl/TextureMesh.h
-          )
-
-        set(sensor_msg_incs 
-          include/sensor_msgs/PointField.h
-          include/sensor_msgs/PointCloud2.h
-          include/sensor_msgs/Image.h
-          )
-
-        set(std_msg_incs include/std_msgs/Header.h)
-    endif(NOT USE_ROS)
-    
     set(common_incs 
         include/pcl/common/boost.h
         include/pcl/common/angles.h
