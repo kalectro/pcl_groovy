@@ -1,0 +1,12 @@
+Source: ros-groovy-pcl
+Section: misc
+Priority: extra
+Maintainer: Julius Kammerl <jkammerl@willowgarage.com>
+Build-Depends: debhelper (>= 7.0.50~), python-sphinx,ros-groovy-rosconsole,cmake,libeigen3-dev,libmysqlclient-dev,ros-groovy-std-msgs,libqhull-dev,ros-groovy-rostime,ros-groovy-roscpp-serialization,libvtk5-dev,ros-groovy-topic-tools,libboost-all-dev,libusb-1.0-0-dev,ros-groovy-flann,ros-groovy-sensor-msgs,ros-groovy-roscpp-traits,ros-groovy-cpp-common,ros-groovy-rosbag,ros-groovy-roscpp
+Homepage: http://www.pointclouds.org
+Standards-Version: 3.9.2
+
+Package: ros-groovy-pcl
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-sphinx,ros-groovy-rosconsole,libeigen3-dev,libmysqlclient-dev,ros-groovy-std-msgs,libqhull-dev,ros-groovy-rostime,ros-groovy-roscpp-serialization,libvtk5-dev,ros-groovy-topic-tools,libboost-all-dev,libusb-1.0-0-dev,ros-groovy-flann,ros-groovy-sensor-msgs,ros-groovy-roscpp-traits,ros-groovy-cpp-common,ros-groovy-rosbag,ros-groovy-roscpp
+Description: The Point Cloud Library (or PCL) for point cloud processing - development The PCL framework contains numerous state-of-the art algorithms including filtering, feature estimation, surface reconstruction, registration, model fitting and segmentation.
