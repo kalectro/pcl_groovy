@@ -29,26 +29,8 @@ endmacro(get_ros_inc_path)
     message(STATUS "Found ROS; USE_ROS is ${USE_ROS}")
     if(USE_ROS)
         # Search for ROS
-        find_package(ROS COMPONENTS catkin roscpp_serialization std_msgs sensor_msgs rostime)
-	if (ROS_FOUND)
-	  # if find_package(ROS ...) found the required components, add their include directories
-          include_directories(${ROS_INCLUDE_DIRS})
-	else()
-          # otherwise, search for these particular packages the old hacky way	  
-          set(_ros_pkgs std_msgs sensor_msgs roscpp_serialization cpp_common rostime
-            roscpp_traits roscpp rosconsole std_msgs rosbag topic_tools pcl)
-          set(_ros_paths)
-          foreach(_pkg ${_ros_pkgs})
-            get_ros_inc_path(_path ${_pkg})
-            list(APPEND _ros_paths ${_path})
-          endforeach(_pkg)
-          foreach(_path ${_ros_paths})
-            include_directories(${_path}/include
-              ${_path}/msg_gen/cpp/include
-              )
-            link_directories(${_path}/lib)
-          endforeach(_path)
-	endif()
+        find_package(catkin REQUIRED COMPONENTS roscpp_serialization std_msgs sensor_msgs rostime)
+        include_directories(${catkin_INCLUDE_DIRS})
 
         # use, i.e. don't skip the full RPATH for the build tree
         SET(CMAKE_SKIP_BUILD_RPATH  FALSE)

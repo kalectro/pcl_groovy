@@ -14,6 +14,7 @@ project(PCL)
 string(TOLOWER ${PROJECT_NAME} PROJECT_NAME_LOWER)
 
 set( USE_ROS "ON" )
+set( ROS_FOUND 1 )
 
 ### ---[ Find universal dependencies
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/Modules/" ${CMAKE_MODULE_PATH})
