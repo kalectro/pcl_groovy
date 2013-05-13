@@ -8,7 +8,6 @@
   <maintainer email="jkammerl@willowgarage.com">Julius Kammerl</maintainer>
   <author>Open Perception</author>
   <license>BSD</license>
-  <copyright>Open Perception</copyright>
 
   <url type="website">http://www.pointclouds.org</url>
   <url type="bugtracker">http://dev.pointclouds.org</url>
